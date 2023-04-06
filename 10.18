@@ -1,0 +1,4 @@
+UserInput = input()
+listintegers = [int(i) for i in UserInput.split() if (int(i)>=0)] 
+listintegers.sort()
+[print(i, end=' ') for i in listintegers]
