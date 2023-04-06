@@ -1,0 +1,35 @@
+class Player:
+    def init(self, name: str, games: int = 0, goals: int = 0):
+        self.name = name
+        self.games = games
+        elf.goals = goals
+
+    def __str__(self):
+        if self.games > 0:
+            return f"Name: {self.name.ljust(15)}Games: {str(self.games).ljust(5)}Goals: {str(self.goals).ljust(5)}"
+        else:
+            return f"Name: {self.name.ljust(15)}No information available on this player"
+
+
+class Team:
+    def init(self, name: str, player_list: list[Player] = [], won: int = 0, drawn: int = 0, lost: int = 0):
+        self.name = name
+        self.players = player_list
+        self.won = won
+        self.drawn = drawn
+        self.lost = lost
+
+        def best_goal_average(self) -> tuple[str, float]:
+            max_average = 0.0
+            est_player = ""
+            for player in self.players:
+                if player.games > 0:
+                    average = player.goals / player.games
+                    if average > max_average:
+                        max_average = average
+                        best_player = player.name
+                        return best_player, max_average
+
+
+def get_points(self) -> int:
+    return self.won * 3 + self.drawn
