@@ -1,0 +1,10 @@
+words = input() 
+word_list=words.split()
+word_dict = {}
+for word in word_list:
+    if word in word_list:
+        word_dict[word] += 1
+    else:
+        word_dict[word] = 1
+for word in word_list:
+print(word, word_dict[word])
